@@ -2,10 +2,10 @@
 /* eslint-disable no-unused-vars */
 import _ from 'lodash';
 import './style.css';
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 
 const toDoList = [
   {
@@ -23,7 +23,7 @@ const toDoList = [
     completed: false,
     index: 2,
   },
-]
+];
 
 function renderList() {
   const list = document.getElementById('to_do_list');
@@ -36,7 +36,7 @@ function renderList() {
     </div>
     <i class="fas fa-ellipsis-v"></i>
   </li>`;
-  })
+  });
 }
 
-window.addEventListener('load', renderList)
+window.addEventListener('load', renderList);
