@@ -38,3 +38,5 @@ function renderList() {
   </li>`;
   })
 }
+
+window.addEventListener('load', renderList)
