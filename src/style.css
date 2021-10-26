@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html {
+  width: 100vw;
+}
+
+body {
+  position: relative;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.to_dolist_container {
+  position: relative;
+  width: 50%;
+  margin: 2em auto;
+
+  /* margin: auto; */
+  box-shadow: 0 0 1em rgb(186, 186, 185);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(186, 186, 183);
+  padding: 0.7em 1em;
+  margin: 0;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+#to_doList_form {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgb(186, 186, 183);
+}
+
+.to_do_input {
+  padding: 0.7em 1em;
+  font-style: italic;
+  font-size: 15px;
+  border: none;
+  outline: none;
+}
+
+.svg-inline--fa { color: rgb(185, 185, 185); }
+
+.submit_btn {
+  background-color: inherit;
+
+  /* padding: 10px; */
+  margin-right: 0.5em;
+  border: none;
+}
+
+#to_do_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--bottom-line);
+  padding: 0 1em;
+}
+
+.checkbox_container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox_container p {
+  margin: 0.7em;
+}
+
+.clear_all {
+  width: 100%;
+  text-align: center;
+  border: 0;
+  padding: 1em;
+  background-color: rgb(225, 225, 225);
+  color: rgb(150, 150, 150);
+  font-size: 20px;
+}
