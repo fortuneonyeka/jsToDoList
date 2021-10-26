@@ -24,3 +24,17 @@ const toDoList = [
     index: 2,
   },
 ]
+
+function renderList() {
+  const list = document.getElementById('to_do_list');
+  list.innerHTML = '';
+  toDoList.forEach((e) => {
+    list.innerHTML += `<li class="list_container">
+    <div class="checkbox_container">
+      <input type="checkbox">
+      <p>${e.description}</p>
+    </div>
+    <i class="fas fa-ellipsis-v"></i>
+  </li>`;
+  })
+}
