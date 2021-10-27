@@ -1,4 +1,3 @@
-
 export default function checkToDo(toDo) {
   const toDos = JSON.parse(localStorage.getItem('toDoList'));
   const toDoIndex = toDos.findIndex((item) => item.description === toDo.children[1].innerText);
