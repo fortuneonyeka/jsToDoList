@@ -40,5 +40,9 @@ function addToDo(e) {
   }
 }
 
+window.addEventListener('DOMContentLoaded', renderList);
+addBtn.addEventListener('click', addToDo)
+
+
 
 
