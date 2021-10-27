@@ -12,6 +12,13 @@ const list = document.getElementById('to_do_list');
 
 let toDoList = [];
 
+function updateLocalStorage() {
+  localStorage.toDoList = JSON.stringify(toDoList);
+  // document.location.reload();
+  return false;
+}
+
+
 
 function renderList() {
   list.innerHTML = '';
