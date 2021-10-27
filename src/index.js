@@ -2,6 +2,9 @@
 import './style.css';
 import './check';
 
+if (localStorage.toDoList !== undefined) {
+  toDoList = JSON.parse(localStorage.toDoList)
+}
 
 const input = document.querySelector(".to_do_input")
 const addBtn = document.querySelector(".submit_btn")
