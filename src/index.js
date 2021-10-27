@@ -14,7 +14,6 @@ const list = document.getElementById('to_do_list');
 
 function updateLocalStorage() {
   localStorage.toDoList = JSON.stringify(toDoList);
-  // document.location.reload();
   return false;
 }
 
@@ -34,7 +33,6 @@ function renderList() {
 }
 
 function addToDo(e) {
-  // e.preventDefault()
   if (input.value) {
     toDoList.push({
       description: input.value,
