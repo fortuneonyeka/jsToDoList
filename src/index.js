@@ -2,6 +2,7 @@
 import './style.css';
 import './check';
 
+let toDoList = [];
 if (localStorage.toDoList !== undefined) {
   toDoList = JSON.parse(localStorage.toDoList)
 }
@@ -10,7 +11,7 @@ const input = document.querySelector(".to_do_input")
 const addBtn = document.querySelector(".submit_btn")
 const list = document.getElementById('to_do_list');
 
-let toDoList = [];
+
 
 function updateLocalStorage() {
   localStorage.toDoList = JSON.stringify(toDoList);
