@@ -10,3 +10,19 @@ const list = document.getElementById('to_do_list');
 let toDoList = [];
 
 
+function renderList() {
+  list.innerHTML = '';
+  
+  toDoList.forEach((toDo) => {
+    list.innerHTML += `
+    <li class="list_container">
+    <div class="checkbox_container ${toDo.completed? 'completed-task' : ''}">
+      <input type="checkbox" class="checkbox_input" ${toDo.completed? 'checked': ''}>
+      <p>${toDo.description}</p>
+    </div>
+    <i class="fas fa-ellipsis-v"></i>
+  </li>`;
+  });
+}
+
+
