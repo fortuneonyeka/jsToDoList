@@ -17,7 +17,7 @@
 "To-do list app" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete.
 
 <p align="center">
-    <img alt="Screenshot" src="./imgs/To-Do-List.png" width="500">
+    <img alt="Screenshot" src="./imgs/To-Do-List-App.png" width="500">
 </p>
 
 ## Built With
