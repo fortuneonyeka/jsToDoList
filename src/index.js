@@ -25,4 +25,20 @@ function renderList() {
   });
 }
 
+function addToDo(e) {
+  // e.preventDefault()
+  if (input.value) {
+   toDoList.push({
+     description: input.value,
+     completed: false,
+     index: toDoList.length + 1
+    }) 
+    list.innerHTML = ''
+    renderList();
+    updateLocalStorage();
+    input.value = '';
+  }
+}
+
+
 
