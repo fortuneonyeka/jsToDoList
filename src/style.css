@@ -62,13 +62,13 @@ i { pointer-events: none; }
   border-bottom: var(--bottom-line);
 }
 
-#to-do-input,
+.to_do_input,
 .edit-input {
   border: 0;
   padding: 0.7em 1.2em;
   outline: 0;
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   width: 80%;
 }
 
