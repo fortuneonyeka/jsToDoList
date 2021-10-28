@@ -78,7 +78,8 @@ function renderList() {
   deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>'
   
 
-  deleteButton.addEventListener('click', function(){
+  deleteButton.addEventListener('click', function(e){
+    e.preventDefault();
 console.log('clicked');
     deleteToDo(todo.index)
   })
