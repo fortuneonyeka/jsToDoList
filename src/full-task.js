@@ -144,3 +144,7 @@ function addToDo(e) {
   updateLocalStorage()
   input.value = '';
 }
+
+window.addEventListener('DOMContentLoaded', renderList);
+addBtn.addEventListener('click', addToDo);
+clearAll.addEventListener('click', clearCompleted);
