@@ -48,17 +48,17 @@ function renderList() {
   iDescription.classList.add('edit-input');
   iDescription.classList.add(`${todo.completed ? 'completed-task' : 'checkbox-description-container'}`);
   
+  
   checkDiv.appendChild(iDescription);
-  console.log(iDescription);
-
-  // iDescription.addEventListener('keydown', (e) => {
-  //   const newDescription = iDescription.value;
-  //   if (e.key == 13) {
-  //     const oldToDo = JSON.parse(localStorage.toDoList);
-  //     oldToDo[todo.index].description = newDescription;
-  //     localStorage.setItem('toDoList', JSON.stringify(oldToDo))
-  //   }
-  // });
+  
+  iDescription.addEventListener('keydown', (e) => {
+    const newDescription = iDescription.value;
+    if (e.keyCode === 13) {
+      const oldToDo = JSON.parse(localStorage.toDoList);
+      oldToDo[todo.index].description = newDescription;
+      localStorage.setItem('toDoList', JSON.stringify(oldToDo))
+    }
+  });
 
   //buttons container
   const buttonsDiv = document.createElement('div')
@@ -135,14 +135,19 @@ function clearCompleted(e) {
 
 function addToDo(e) {
   e.preventDefault();
-  toDoList.push({
-    description: input.value,
-    completed: false,
-    index : toDoList.length 
-  })
-  list.innerHTML = '';
-  updateLocalStorage()
-  input.value = '';
+  if (input.value < 1 ) {
+    return false
+  }else{
+
+    toDoList.push({
+      description: input.value,
+      completed: false,
+      index : toDoList.length 
+    })
+    list.innerHTML = '';
+    updateLocalStorage()
+    input.value = '';
+  }
 }
 
 window.addEventListener('DOMContentLoaded', renderList);
