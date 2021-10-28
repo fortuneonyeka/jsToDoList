@@ -98,3 +98,49 @@ console.log('clicked');
   
 })
 }
+
+
+function updateLocalStorage() {
+  localStorage.toDoList = JSON.stringify(toDoList);
+  document.location.reload()
+  return false;
+}
+
+function updateIndex() {
+  let counter = 0;
+  toDoList.forEach((todo) => {
+    todo.index = counter
+    counter++;
+  })
+  updateLocalStorage()
+}
+
+function deleteToDo(index) {
+  toDoList.splice(index, 1);
+  updateIndex()
+}
+
+function showButtons(index) {
+  document.querySelector(`.buttons-container-${index}`).classList.toggle('hidden')
+}
+
+
+function clearCompleted(e) {
+  e.preventDefault();
+  toDoList = JSON.parse(localStorage.toDoList);
+  toDoList = toDoList.filter((todo) => todo.completed === false);
+  updateIndex();
+  updateLocalStorage();
+}
+
+function addToDo(e) {
+  e.preventDefault();
+  toDoList.push({
+    description: input.value,
+    completed: false,
+    index : toDoList.length 
+  })
+  list.innerHTML = '';
+  updateLocalStorage()
+  input.value = '';
+}
