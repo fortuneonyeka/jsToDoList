@@ -46,13 +46,14 @@ i { pointer-events: none; }
   box-shadow: 0 0 1em rgb(220, 216, 216);
 }
 
-.to-do-container > h1 {
+/* .to-do-container > h1 {
   border-bottom: var(--bottom-line);
   padding: 0.7em 1em;
   margin: 0;
   font-size: 15px;
   font-weight: normal;
-}
+  background-color:red;
+} */
 
 #to-do-form {
   display: flex;
@@ -75,6 +76,7 @@ i { pointer-events: none; }
 .edit-input {
   font-style: normal;
   font-size: 15px;
+  /* background-color:red; */
 }
 
 .svg-inline--fa { color: rgb(185, 185, 185); }
@@ -91,6 +93,7 @@ i { pointer-events: none; }
   list-style: none;
   margin: 0;
   padding: 0;
+  /* background-color:red; */
 }
 
 .list_container {
@@ -99,6 +102,7 @@ i { pointer-events: none; }
   align-items: center;
   border-bottom: var(--bottom-line);
   padding: 0 1em;
+  
 }
 
 .checkbox_container {
@@ -160,6 +164,7 @@ button {
 .checkbox-description-container {
   display: flex;
   align-items: center;
+  
 }
 
 .checkbox-description-container > p { margin: 0.7em; }
@@ -182,3 +187,27 @@ button {
 .show { display: flex; }
 
 .hidden { display: none; }
+
+.whiteBackground {
+background-color: wheat
+}
+
+.blackBackground {
+  background-color: black
+}
+
+ul li.checked {
+  background: #888;
+  color: red;
+  text-decoration: line-through;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+/* ul li:nth-child(odd) {
+  background: #f9f9f9;
+} */
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
