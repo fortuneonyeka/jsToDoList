@@ -76,7 +76,7 @@ i { pointer-events: none; }
 .edit-input {
   font-style: normal;
   font-size: 15px;
-  /* background-color:red; */
+  background-color:'#f8f8cc';
 }
 
 .svg-inline--fa { color: rgb(185, 185, 185); }
@@ -93,7 +93,7 @@ i { pointer-events: none; }
   list-style: none;
   margin: 0;
   padding: 0;
-  /* background-color:red; */
+  /* background-color:yellow; */
 }
 
 .list_container {
@@ -204,10 +204,14 @@ ul li.checked {
 
 /* Set all odd list items to a different color (zebra-stripes) */
 /* ul li:nth-child(odd) {
-  background: #f9f9f9;
+  background: yellow;
 } */
 
 /* Darker background-color on hover */
 ul li:hover {
   background: #ddd;
+}
+
+input:hover {
+  background-color:#ddd
 }

@@ -51,12 +51,10 @@ function renderList() {
     iDescription.classList.add(`description-${todo.index}`);
     iDescription.value = todo.description;
     iDescription.classList.add('edit-input');
-    iDescription.id = 'edit-input';
+    // iDescription.id = 'edit-input';
     iDescription.classList.add(`${todo.completed ? 'completed-task' : 'checkbox-description-container'}`);
 
     checkDiv.appendChild(iDescription);
-
-    console.log(iDescription);
 
     iDescription.addEventListener('keydown', (e) => {
       const newDescription = iDescription.value;
@@ -111,7 +109,7 @@ function renderList() {
     if (styling % 2 === 0) {
       
       todoItem[i].style.backgroundColor = '#f8f8cc'
-        document.querySelector('#edit-input').style.backgroundColor = '#f8f8cc' 
+        document.querySelector('.edit-input').style.backgroundColor = '#f8f8cc' 
       } 
   }
   
