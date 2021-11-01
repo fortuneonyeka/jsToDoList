@@ -50,8 +50,8 @@ $ npm start
 </details>
 
 3. Open the `index.html` file and run the application;
-
-[Live Demo Link]([https://link](https://fortuneonyeka.github.io/jsToDoList/dist/))
+## Live Demo
+[Live Demo Link](https://fortuneonyeka.github.io/jsToDoList/dist)
 
 ## Author
 
