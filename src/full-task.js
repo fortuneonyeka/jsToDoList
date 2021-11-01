@@ -5,6 +5,7 @@ import './check.js';
 
 let toDoList = [];
 
+
 if (localStorage.toDoList !== undefined) {
   toDoList = JSON.parse(localStorage.toDoList);
 }
@@ -19,7 +20,10 @@ function renderList() {
   toDoList.forEach((todo) => {
     const newTodo = document.createElement('li');
     newTodo.classList.add('task-container');
+    newTodo.id = 'task-container';
     list.appendChild(newTodo);
+
+    
 
     // span hidden index
     const index = document.createElement('span');
@@ -33,6 +37,8 @@ function renderList() {
     checkDiv.classList.add('checkbox-description-container');
     newTodo.appendChild(checkDiv);
 
+    
+
     // input-checkbox
     const checkbox = document.createElement('input');
     checkbox.classList.add('checkbox-input');
@@ -45,9 +51,12 @@ function renderList() {
     iDescription.classList.add(`description-${todo.index}`);
     iDescription.value = todo.description;
     iDescription.classList.add('edit-input');
+    iDescription.id = 'edit-input';
     iDescription.classList.add(`${todo.completed ? 'completed-task' : 'checkbox-description-container'}`);
 
     checkDiv.appendChild(iDescription);
+
+    console.log(iDescription);
 
     iDescription.addEventListener('keydown', (e) => {
       const newDescription = iDescription.value;
@@ -91,8 +100,23 @@ function renderList() {
     menuButton.addEventListener('click', () => {
       showButtons(todo.index);
     });
+    
   });
+  const todoItem = document.querySelector('#to_do_list').children
+   
+
+  for (let i = 0; i < todoItem.length; i++) {
+  
+    const styling = Number(todoItem[i].firstChild.innerHTML);
+    if (styling % 2 === 0) {
+      
+      todoItem[i].style.backgroundColor = '#f8f8cc'
+        document.querySelector('#edit-input').style.backgroundColor = '#f8f8cc' 
+      } 
+  }
+  
 }
+
 
 function updateLocalStorage() {
   localStorage.toDoList = JSON.stringify(toDoList);
@@ -141,6 +165,9 @@ function addToDo(e) {
   updateLocalStorage();
   input.value = '';
 }
+
+
+// console.log(list);
 
 window.addEventListener('DOMContentLoaded', renderList);
 addBtn.addEventListener('click', addToDo);
